@@ -72,6 +72,10 @@ namespace Library_Management
             {
                 MessageBox.Show(ex.Message);
             }
+            finally
+            {
+                ConnectionString.connection().Close();
+            }
         }
 
         private void btnBook_Click(object sender, EventArgs e)
@@ -94,6 +98,10 @@ namespace Library_Management
             catch (Exception ex)
             {
                 MessageBox.Show("Kitap Rezervasyon İşlemi Esnasında Bir Hata Oluştu.", MessageBoxIcon.Error + ex.Message);
+            }
+            finally
+            {
+                ConnectionString.connection().Close();
             }
 
         }
@@ -118,6 +126,10 @@ namespace Library_Management
             catch (Exception ex)
             {
                 MessageBox.Show("Kitap İade İşlemi Esnasında Bir Hata Oluştu.", MessageBoxIcon.Error + ex.Message);
+            }
+            finally
+            {
+                ConnectionString.connection().Close();
             }
         }
     }

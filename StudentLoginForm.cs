@@ -39,6 +39,10 @@ namespace Library_Management
             {
                 MessageBox.Show("Giriş Bilgileriniz Hatalı veya Bu Sayfaya Erişim Yetkiniz Yok.", MessageBoxIcon.Error + ex.Message);
             }
+            finally
+            {
+                ConnectionString.connection().Close();
+            }
         }
     }
 }

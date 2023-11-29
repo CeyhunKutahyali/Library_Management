@@ -58,6 +58,10 @@ namespace Library_Management
             {
                 MessageBox.Show("İşlem sırasında bir hata oluştu" + ex.Message);
             }
+            finally
+            {
+                ConnectionString.connection().Close();
+            }
         }
 
 
@@ -86,6 +90,10 @@ namespace Library_Management
             catch (Exception ex)
             {
                 MessageBox.Show("Hata oluştu: " + ex.Message);
+            }
+            finally
+            {
+                ConnectionString.connection().Close();
             }
         }
 
@@ -128,6 +136,10 @@ namespace Library_Management
             {
                 MessageBox.Show("DataGrid'de bir sorun oluştu" + ex.Message);
             }
+            finally
+            {
+                ConnectionString.connection().Close();
+            }
         }
 
         private void btnBookAdd_Click(object sender, EventArgs e)
@@ -147,6 +159,10 @@ namespace Library_Management
             catch (Exception ex)
             {
                 MessageBox.Show("Kayıt İşlemi Sırasında Hata Oluştu" + ex.Message);
+            }
+            finally
+            {
+                ConnectionString.connection().Close();
             }
         }
 
@@ -169,6 +185,10 @@ namespace Library_Management
             {
                 MessageBox.Show("Güncelleme İşlemi Sırasında Hata Oluştu" + ex.Message);
             }
+            finally
+            {
+                ConnectionString.connection().Close();
+            }
         }
 
         private void btnBookDelete_Click(object sender, EventArgs e)
@@ -184,6 +204,10 @@ namespace Library_Management
             catch (Exception ex)
             {
                 MessageBox.Show("Silme İşlemi Sırasında Hata Oluştu" + ex.Message);
+            }
+            finally
+            {
+                ConnectionString.connection().Close();
             }
         }
 
@@ -211,6 +235,10 @@ namespace Library_Management
             {
                 MessageBox.Show("Rezervasyon Sırasıında Bir Hata Oluştu." + ex.Message);
             }
+            finally
+            {
+                ConnectionString.connection().Close();
+            }
         }
 
         private void btnRzrEdit_Click(object sender, EventArgs e)
@@ -231,6 +259,10 @@ namespace Library_Management
             {
                 MessageBox.Show("Rezervasyon Güncelleme İşlemi Sırasında Hata Oluştu" + ex.Message);
             }
+            finally
+            {
+                ConnectionString.connection().Close();
+            }
         }
 
         private void btnRzrDelete_Click(object sender, EventArgs e)
@@ -246,6 +278,10 @@ namespace Library_Management
             catch (Exception ex)
             {
                 MessageBox.Show("Rezervasyon Silme İşlemi Sırasında Hata Oluştu" + ex.Message);
+            }
+            finally
+            {
+                ConnectionString.connection().Close();
             }
         }
 
@@ -277,6 +313,10 @@ namespace Library_Management
             catch (Exception ex)
             {
                 MessageBox.Show("İade İşlemi Sırasında Hata Oluştu" + ex.Message);
+            }
+            finally
+            {
+                ConnectionString.connection().Close();
             }
         }
     }
